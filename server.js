@@ -24,7 +24,8 @@ app.get('/', (req, res) => {
 app.get('/set', function (req, res) {
     console.log(JSON.stringify(req.query));
     var record = {
-        x: req.query.x
+        x: req.query.x,
+        name: "Peter Guentert"
     };
     postAllAsync(res, record).then(function (response) {
         console.log("posted data: " + JSON.stringify(record));
